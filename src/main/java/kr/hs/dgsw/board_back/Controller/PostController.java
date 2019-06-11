@@ -25,7 +25,7 @@ public class PostController {
     public Long addPost(@RequestBody Post post){
         return this.postService.add(post);
     }
-    @PutMapping("/modifyPost")
+    @PutMapping("/editPost")
     public int modifyPost(@RequestBody Post post){
         return this.postService.modify(post);
     }
