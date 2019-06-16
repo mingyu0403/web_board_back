@@ -19,4 +19,8 @@ public interface UserMapper {
     Long add(User user);
     int modify(User user);
     User findById(@Param("id") Long id);
+
+    @Select("select id, account, username, email, created, updated from user " +
+            "where account=#{account} and password=#{password}")
+    User findByAccountAndPassword(@Param("account") String account, @Param("password") String password);
 }

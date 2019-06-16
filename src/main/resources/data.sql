@@ -11,6 +11,6 @@ values
 insert into post(user_id, title, content)
 values
 (1, 'posting title 1', 'posting data 1'),
-(1, 'posting title 2', 'posting data 2'),
-(1, 'posting title 3', 'posting data 3'),
-(1, 'posting title 4', 'posting data 4');
+(2, 'posting title 2', 'posting data 2'),
+(3, 'posting title 3', 'posting data 3'),
+(4, 'posting title 4', 'posting data 4');

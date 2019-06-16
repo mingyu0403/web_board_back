@@ -37,4 +37,9 @@ public class UserServiceImpl implements UserService{
     public User findById(Long id) {
         return this.userMapper.findById(id);
     }
+
+    @Override
+    public User findByAccountAndPassword(String account, String password) {
+        return this.userMapper.findByAccountAndPassword(account, password);
+    }
 }

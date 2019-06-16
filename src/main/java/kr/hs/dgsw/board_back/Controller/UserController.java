@@ -21,11 +21,15 @@ public class UserController {
     public User getUser(@PathVariable Long id){
         return this.userService.findById(id);
     }
+    @GetMapping("/loginUser/{account}/{password}")
+    public User getUser(@PathVariable String account, @PathVariable String password){
+        return this.userService.findByAccountAndPassword(account, password);
+    }
     @PostMapping("/addUser")
     public Long addUser(@RequestBody User user){
         return this.userService.add(user);
     }
-    @PutMapping("/modifyUser")
+    @PutMapping("/editUser")
     public int modifyUser(@RequestBody User user){
         return this.userService.modify(user);
     }
